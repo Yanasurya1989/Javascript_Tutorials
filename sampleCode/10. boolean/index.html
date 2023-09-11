@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+<body>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr align="center">
+                <td>Truthy : menghasilkan nilai true</td>
+                <td>Falsy : menghasilkan nilai false</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td>true</td>
+                <td>false</td>
+            </tr>
+            <tr align="center">
+                <td>non-zero number</td>
+                <td>0</td>
+            </tr>
+            <tr align="center">
+                <td>"string"</td>
+                <td>""</td>
+            </tr>
+            <tr align="center">
+                <td>object</td>
+                <td>undefined</td>
+            </tr>
+            <tr align="center">
+                <td>array</td>
+                <td>null</td>
+            </tr>
+            <tr align="center">
+                <td>functions</td>
+                <td>NaN</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script>
+        document.writeln("<p>Sample : </p>")
+        document.writeln(true, " | ")
+        document.writeln(false," | </p>")
+
+        document.writeln(0, " |")
+        document.writeln(2," | </p>")
+        
+        var a ="string"
+        var b = ""
+        document.writeln(a, " |")
+        document.writeln(b," | </p>")
+
+        x = 10
+
+        var bol = x < 20
+        document.writeln("x : ",bol)
+
+        var name = "Yana" === "yana"
+        document.writeln(" | name : ",name)
+
+        var name2 = "Yana" == "yana"
+        document.writeln(" | name : ",name2)
+
+        var name3 = "Yana" == "Yana"
+        document.writeln(" | name : ",name3)
+
+        document.writeln("<p> sample undefined : </p>")
+        var y
+        document.writeln(y)
+
+        document.writeln("<p> sample null : </p>")
+        var z = null
+        document.writeln(z)
+    </script>
+</body>
+</html>

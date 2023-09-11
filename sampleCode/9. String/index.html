@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penulisan String - JS</title>
+</head>
+
+<body>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <thead align="center">
+            <tr>
+                <td>Escape character</td>
+                <td>Hasil</td>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>\0</td>
+                <td>karakter NULL</td>
+            </tr>
+            <tr>
+                <td>\'</td>
+                <td>'</td>
+            </tr>
+            <tr>
+                <td>\"</td>
+                <td>"</td>
+            </tr>
+            <tr>
+                <td>\\</td>
+                <td>\</td>
+            </tr>
+            <tr>
+                <td>\n</td>
+                <td>\new line / baris baru</td>
+            </tr>
+            <tr>
+                <td>\t</td>
+                <td>tab</td>
+            </tr>
+            <tr>
+                <td>/b</td>
+                <td>backspace</td>
+            </tr>
+            <tr>
+                <td>uXXX</td>
+                <td>unicode</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        document.writeln("<p>Menggunakan petik dua</p>")
+
+        document.writeln('<p>menggunakan petik satu</p>')
+
+        document.writeln('<p>yang didalamnya terdapat petik dua contoh penulisan ungkapan "dia berkata seprti ini"</p>')
+
+        document.writeln('<p> yg didalamnya terdapat petik satu, contoh: "gerakan Jum\'at berkah"</p>')
+
+        document.writeln("contoh petik satu lainnya : \"Gerakan sedekah masjid\" dilaksanakan pada hari Jum'at \n")
+
+        document.writeln("ini contoh \t penggunaan \t tab")
+
+        document.writeln('<p>ini contoh unicode : \u00A9 </p>')
+
+        var nama = "Nyanyang Suryana"
+
+        document.writeln("berikut adalah contoh length :") 
+        document.writeln(nama.length)
+
+        document.writeln("<p>\'</p>")
+        document.writeln("<p>\0</p>")
+        document.writeln("<p>\"</p>")
+        document.writeln("\\ \n")
+        document.writeln("")
+    </script>
+</body>
+</html>
