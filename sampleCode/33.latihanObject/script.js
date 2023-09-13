@@ -1,6 +1,6 @@
 // membuat object angkot
 function Angkot(sopir, trayek, penumpang, kas){ //simpan disini properti2(vriable dalam object) yang dibutuhkan pada saat intansiasi
-    this.sopir = sopir; //perhatikan fungsi this untuk setiap cara dalam pembuatan object(pada kasus ini akan mengembalikan dirinya(yang ada dalam objectnya))
+    this.sopir = sopir; //perhatikan fungsi this untuk setiap cara dalam pembuatan object(pada kasus ini dengan constructor function akan mengembalikan dirinya(yang ada dalam objectnya))
     this.trayek = trayek;
     this.penumpang = penumpang;
     this.kas = kas;
