@@ -1,3 +1,5 @@
+// const digunakan jika dipastikan tidak akan ada perubahan
+
 // console.log(a)
 // const a = 10//ini pun sama dengan let, tidak seperti var yang mengembalikan niai berupa undefined, jika ini dijalankan tidak akan mengembalikan nilai undefined tapi akan eror
 
