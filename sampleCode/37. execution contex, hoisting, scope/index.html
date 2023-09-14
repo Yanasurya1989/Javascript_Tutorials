@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution Contex, Hoisting dan Scope</title>
+</head>
+<body>
+    <ol>Phase execution contex
+        <li>Creation</li>
+        <li>Execution</li>
+    </ol>
+
+    <h6>Pada saat program dijalankan ada sesuatu yang terjadi yang dinamakan Creation Phase yang terjadi pada context global jika dibuat langsung didalam file javascriptnya/window (bukan didalam function) </h6>
+    <ol>Proses Creation Phase (Phase pembentukan) : 
+        <li>Cek apakah ada function atau variable didalam windownya</li>
+        <li>Jika ada var akan diisi dengan undefined secara default ex : var nama = undefined</li>
+        <li>jika ada function akan diisi dengan function itu sendiri ex : function nama = fn()</li>
+        konsep diatas dinamakna Hoisting(menggeret)
+        <p>ex : </p>
+        <p>console.log(nama)</p>
+        <p>var nama = 'Mimin'</p>
+        <p>Pada dua baris code diatas, var akan digeret keatas dengan nilai undefined dan console log tidak dijalankan, karena jika ada kode console.log(nama) saja tanpa ada var nama = 'Mimin' akan terjadi eror dengan keterangan nama tidak dikenali</p>
+    </ol>
+    <h6>selain mendefinisikan dua hal tadi (var atau function) javascript juga mendefinisikan object window sebagai global object dan this sebagai window, untuk ngeceknya ketikan window atau this pada halaman console maka akan tampil beberapa object meskipun didalam file javascript tidak ada baris code apapun</h6>
+
+    <ol>Proses execution phase:
+        <li>Mengeksekusi program dari atas kebawah
+            <p>ex : </p>
+            <p>var nama = 'Yana'</p>
+                <p>umur = 34</p>
+                
+                <p>function hallo(){</p>
+                <p>console.log(`Halo nama saya ${nama}, umur saya ${umur}`)</p>
+            </p>}</p>
+            <p>pada baris kode diatas belum mengembalikan apapun yang padahal consolnya sidah tersimpan didalam memori</p>
+        </li>
+    </ol>
+    <p>untuk melihat step2 kode dijalankan pada kontex eksekusi bisa dengan menggunakan <a href="https://pythontutor.com/render.html#mode=display">web ini </a> </p>
+    <script src="script.js"></script>
+</body>
+</html>
