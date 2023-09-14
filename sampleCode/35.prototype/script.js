@@ -45,7 +45,7 @@
 
 // function Mahasiswa(nama, energi){ //ini proses pembuatan object
     // let mahasiswa = {}; ini ganti dengan object.create
-    // let mahasiswa = Object.create(methodMahasiswa); //ini dibuat agar bisa terhubung dengan object lain krn didalam object tersebut ada yang dibutuhkan oleh objek ini
+    // let mahasiswa = Object.create(methodMahasiswa); //untuk mengenalkan method yang telah dibuat agar bisa tetap dipanggil tanpa dibuatkan parameter
     // mahasiswa.nama = nama;
     // mahasiswa.energi = energi; 
     // bagian dari sini kebawah dihilangkan dan ganti dengan object.create
@@ -82,10 +82,51 @@
 // // let yana = new Mahasiswa('Yana', 10)
 
 
-function Mahasiswa(nama, energi){
+// constructor
+// function Mahasiswa(nama, energi){ 
+//     this.nama = nama;
+//     this.energi = energi; 
 
-    this.nama = nama;
-    this.energi = energi; 
+// }
+
+// Mahasiswa.prototype.makan = function (porsi){
+//     this.energi += porsi;
+
+//     return `Halo ${this.nama}, selamat makan`;
+// }
+
+// Mahasiswa.prototype.main = function(jam){
+//     this.energi -= jam
+//     return `Halo ${this.nama}, selamat bermain`
+// }
+
+// Mahasiswa.prototype.tidur = function(){
+//     this.main += jam
+//     return `Halo ${this.nama}, selamat tidur`
+// }
+
+// let yana = new Mahasiswa('Yana', 100); 
+
+// versi class
+class Mahasiswa {
+    constructor(nama, energi){
+        this.nama = nama;
+        this.energi = energi;
+    }
+
+    makan(porsi){
+        this.energi += porsi;
+        return `Halo ${this.nama}, selamat makan`
+    }
+    main(jam){
+        this.energi -= jam;
+        return `Halo ${this.nama}, selamat main`
+    }
+    tidur(jam){
+        this.energi += jam * 2;
+        return `Halo ${this.nama}, selamat tidur`
+    }
 }
 
-let yana = new Mahasiswa("yana", 10)
+let nama1 = new Mahasiswa('Nama_1', 10)
+let nama2 = new Mahasiswa('Nama_2', 15)
