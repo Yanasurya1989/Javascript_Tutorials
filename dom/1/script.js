@@ -17,6 +17,6 @@ const h1 = document.getElementsByTagName('h1')//ini jadi html collection
 const hejee = document.getElementsByTagName('h1')[0] //mengganti htmlcollection jadi element
 hejee.style.fontSize = '90px'
 
-// getElementsByClassName - mengembalikan HTMLCollection
+// getElementsByClassName - mengembalikan HTMLCollection(kumpulan element html)
 const pehiji = document.getElementsByClassName('p1')[0]
 pehiji.innerHTML = 'diganti dari js'
