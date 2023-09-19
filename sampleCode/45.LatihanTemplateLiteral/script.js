@@ -38,17 +38,43 @@
 
 // 3. Conditionals
 // ternary
+// const lagu = {
+//     judul: 'Kau Adalah',
+//     penyanyi: 'Isyana Syara',
+//     feat: 'Ray Putra'
+// }
+
+// const el = `<div class="lagu">
+//     <ul>
+//         <li>${lagu.penyanyi}</li>
+//         <li>${lagu.judul} ${lagu.feat ? `(feat. ${lagu.feat})` : ''}</li>
+//     </ul>
+// </div>`
+
 const mhs = {
-    judul: 'Kau Adalah',
-    penyanyi: 'Isyana Syara',
-    feat: 'Ray Putra'
+    nama: 'Yana',
+    semester: 5,
+    mataKuliah: [
+        'Pemrograman Web',
+        'ANSI',
+        'OOP',
+        'Mobile Programming'
+    ]
 }
 
-const el = `<div class="lagu">
-    <ul>
-        <li>${lagu.penyanyi}</li>
-        <li>${lagu.judul} ${lagu.feat ? `(feat. ${lagu.feat})` : ''}</li>
-    </ul>
+function cetakMataKuliah(mataKuliah){
+    return `
+        <ol>
+            ${mataKuliah.map(mk => `<li>${mk}</li>`).join('')}
+        </ol>
+    `
+}
+
+const el = `<div>
+    <h2>${mhs.nama}</h2>
+    <span class="semester">Semeser : ${mhs.semester}</span>
+    <h4>Mata Kuliah : </h4>
+    ${cetakMataKuliah(mhs.mataKuliah)}
 </div>`
 // console.log(el)
 document.body.innerHTML = el
