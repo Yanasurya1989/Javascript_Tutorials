@@ -65,9 +65,9 @@ const Mahasiswa = function(){
     // kode ini untuk cek fungsi this
     setInterval( () => {
         // console.log(this.umur++)
-        console.log(this.umur)//dgn arrow function ini menjadi ke object Mahasiswa
+        console.log(this.umur++)//dgn arrow function ini menjadi ke object Mahasiswa
         // console.log(this.umur)
-    }, 500)
+    }, 900)
 }
 
 const yana = new Mahasiswa()
