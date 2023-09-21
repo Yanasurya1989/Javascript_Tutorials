@@ -1,0 +1,23 @@
+[
+    {
+        "nama": "Yana",
+        "nim": "18111059",
+        "email": "yna@yana.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": 1
+    },
+    {
+        "nama": "Yani",
+        "nim": "18111060",
+        "email": "yna@yana.com",
+        "jurusan": "Teknik Mesin",
+        "idDosenWali": 2
+    },
+    {
+        "nama": "Yanu",
+        "nim": "18111061",
+        "email": "yna@yana.com",
+        "jurusan": "Teknik Industri",
+        "idDosenWali": 3
+    }
+]
