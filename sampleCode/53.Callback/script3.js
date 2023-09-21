@@ -7,22 +7,22 @@
 // });
 // console.log('selesai')
 
-function getDataMahasiswa(url, success, error){
-    let xhr = new XMLHttpRequest()
+// function getDataMahasiswa(url, success, error){
+//     let xhr = new XMLHttpRequest()
 
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState === 4){
-            if(xhr.status === 200){
-                success(xhr.response)
-            }else if(xhr.status === 404){
-                error()
-            }
-        }
-    }
+//     xhr.onreadystatechange = function(){
+//         if(xhr.readyState === 4){
+//             if(xhr.status === 200){
+//                 success(xhr.response)
+//             }else if(xhr.status === 404){
+//                 error()
+//             }
+//         }
+//     }
 
-    xhr.open('get', url)
-    xhr.send()
-}
+//     xhr.open('get', url)
+//     xhr.send()
+// }
 
 // function success(){
 
@@ -32,13 +32,26 @@ function getDataMahasiswa(url, success, error){
 
 // }
 
-console.log('mulai')
-getDataMahasiswa('mahasiswa.json', result => { //asynchronous, dikerjakan terakhir, jadi yang di cetak mulai san selesai dulu, baru arraynya
-    // console.log(JSON.parse(result));
-    // console.log(result)
+// console.log('mulai')
+// getDataMahasiswa('mahasiswa.json', result => { //asynchronous, dikerjakan terakhir, jadi yang di cetak mulai san selesai dulu, baru arraynya
+//     // console.log(JSON.parse(result));
+//     // console.log(result)
 
-    const mhs = JSON.parse(result)
-    mhs.forEach(m => console.log(m.nama)) 
-}, () => {
+//     const mhs = JSON.parse(result)
+//     mhs.forEach(m => console.log(m.nama)) 
+// }, () => {
+// })
+// console.log('selesai')
+
+// dengan menggunakan jquery
+console.log('mulai')
+$.ajax({
+    url: 'mahasiswa.json',
+    success: (mhs) => {
+        mhs.forEach(m => console.log(m.nama))
+    },
+    error: (e) => {
+        console.log(e.responseText)
+    }
 })
 console.log('selesai')
